@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
@@ -10,12 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val etname = findViewById<EditText>(R.id.etname)
-        val bt0k = findViewById<Bytton>(R.id.bt0k)
-        val tvName = findViewById<TextView>(R.id.tvName)
+        val edName = findViewById<EditText>(R.id.edName)
+        val bt0k = findViewById<Button>(R.id.button)
+        val tyName = findViewById<TextView>(R.id.tyName)
 
-        bt0k.set0nClickListener {
-            tvName.text = etname.text
+        bt0k.setOnClickListener{
+            tyName.text = edName.text
         }
     }
 }
